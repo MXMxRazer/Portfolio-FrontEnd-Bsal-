@@ -1,0 +1,54 @@
+@import '../Variables/variables.scss'; 
+@import '../Mixins/mixins.scss'; 
+
+* {
+    font-family: $roboto-font; 
+}
+
+.header-main { 
+    padding: 0.58rem 0rem !important; 
+
+    .header-content {
+        letter-spacing: 1px; 
+        @include FlexDisplay(row, space-between, center, wrap); 
+
+        .bsal-header {
+            font-size: 2.48rem; 
+            font-weight: bolder;
+            font-style: italic;
+            color: $header-title-clr; 
+            cursor: pointer; 
+
+            @include btnHover(transparent, $header-title-clr); 
+        }
+
+        .nav-header {
+            @include FlexDisplay(row, center, center, wrap); 
+            // font-size: inherit;
+
+            .nav-content {
+                font-size: inherit;
+                font-weight: 320;
+                margin-right: 3rem;
+                color: $header-nav-clr; 
+                position: relative; 
+                text-decoration: none;
+
+                @include headerBtnHover($header-nav-clr, #666); 
+
+                &:last-child {
+                    margin-right: 0; 
+                }
+
+                a{
+                    color: inherit; 
+                    text-decoration: none;
+                }
+
+            }
+        }
+
+    }
+
+
+}

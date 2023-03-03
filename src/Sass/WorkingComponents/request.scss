@@ -1,0 +1,122 @@
+@import '../Mixins/mixins.scss'; 
+@import '../Variables/variables.scss'; 
+
+.request-main {
+    width: 100%; 
+    height: 118%;
+    position: relative; 
+    margin-bottom: 2rem;
+    @include centerWithMargin();  
+
+    .title-section {
+        position: relative; 
+        width: 100%;
+        @include titleStyle(); 
+        left: 1rem; 
+
+        @include transitionHeader(); 
+        margin-bottom: 2rem; 
+
+    }
+
+    .content-section{
+        align-self: center;
+        position: relative; 
+        left: 1rem; 
+        width: 88%;     
+        height: 100%;  
+        @include centerWithMargin(); 
+        @include FlexDisplay(row, space-between, center, nowrap);  
+        margin-top: 1.2rem; 
+        gap: 2rem; 
+
+        @include transitionBody(); 
+    
+        .request-graphic {
+            width: 40%;
+            padding-bottom: 30%;
+            background-image: url('../../assets/requestImg.png');
+            background-size: 100% 100%;
+        }
+    
+        .request-box {
+            padding: 0.2rem; 
+            background-color: rgba(82, 82, 92, 0.62);
+            border-radius: $normal-bdr-rdr;
+            width: 60%; 
+            height: 80%; 
+            @include FlexDisplay(column, space-around, center, nowrap);  
+            gap: 1rem; 
+
+            .request-quote {
+                font-style: italic; 
+                color: #fff;
+                padding: 0.8rem;  
+                letter-spacing: 1px;
+                text-align: left;
+            }
+
+            .form-section {
+                padding: 1rem;
+                width: 80%; 
+                background-color: rgba(62, 62, 62, 0.8);
+                border-radius: $medium-bdr-rdr;
+                position: relative; 
+                top: -0.4rem;
+                box-shadow: 0px 0px 6px 6px rgba(52, 52, 52, 0.8);  
+                
+                .title-form {
+                    color: white;  
+                    font-size: 1.4rem;
+                    margin-bottom: 1rem; 
+                }
+
+                .request-inputs {
+                    display: flex; 
+                    gap: 2rem; 
+                    width: 100%; 
+
+                    .request-input {
+                        width: 100%;    
+                        border-radius: $normal-bdr-rdr;
+                        padding: 0.6rem 0.8rem; 
+                        border: none; 
+                    
+                        
+                        &:hover, &:focus {
+                            outline: none; 
+                            opacity: 0.8;
+                            background-color: rgba(255, 255, 255, 0.92);
+                        
+                            &::placeholder {
+                                color: darken($color: #444, $amount: 1); 
+                            }
+
+                        }
+
+                    }
+
+                }
+
+                
+            }
+
+            .request-button {
+                padding: 0.8rem; 
+                font-size: $normal-font - 2rem;
+                cursor: pointer; 
+                color: #fff; 
+                background-color: #444; 
+                border-radius: $normal-bdr-rdr + 8px; 
+                margin-bottom: 1rem; 
+                letter-spacing: 1px; 
+                box-shadow: 0px 0px 8px 6px rgba(0, 0, 0, 0.6); 
+
+                @include btnHover(#111, #fff); 
+            }
+
+        }
+    }
+
+
+}

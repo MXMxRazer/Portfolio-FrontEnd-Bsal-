@@ -1,0 +1,147 @@
+@import '../Variables/variables.scss'; 
+@import '../Mixins/mixins.scss'; 
+
+.my-work-space-main {
+    @include FlexDisplay(row, space-between, center, nowrap); 
+    width: 86%; 
+    height: auto; 
+    margin-top: 5rem;
+    margin-bottom: 4rem;  
+    @include centerWithMargin(); 
+
+    .first-section {
+        @include FlexDisplay(column, flex-start, center, nowrap);
+        width: 77%; 
+        height: 100%; 
+        
+        .my-work-space-title {
+            @include titleStyle(); 
+            width: inherit; 
+            margin-bottom: 2.4rem; 
+            text-align: start;
+
+            @include transitionHeader(); 
+        }
+
+        .work-space-super-box {
+            height: 70%; 
+            background-color: $my-work-space-box-clr; 
+            border-radius: $normal-bdr-rdr; 
+            color: #fff; 
+            width: inherit;
+            padding: 1.4rem 1rem;
+            @include FlexDisplay(column, space-around, stretch, nowrap);
+            gap: 2rem;  
+
+            @include transitionBody(); 
+
+            .work-space-sub-box {
+                @include FlexDisplay(column, center, stretch, nowrap); 
+
+                .sub-box-bar-full {
+                    height: 0.5rem; 
+                    width: 100%; 
+                    border-radius: $normal-bdr-rdr;
+                    background-color: $my-work-space-bar-empty-clr;  
+
+                    .sub-box-bar-filled {
+                        border-radius: inherit;
+                        height: inherit; 
+                        background-color: $my-work-space-bar-fill-clr;
+                    }
+
+                    #id-0 {
+                        width: 90%; 
+                    }
+
+                    #id-1 {
+                        width: 68%; 
+                    }
+
+                    #id-2 {
+                        width: 48%; 
+                    }
+
+                    #id-3 {
+                        width: 32%; 
+                    }
+
+                    #id-4 {
+                        width: 22%; 
+                    }
+                   
+                    }
+
+                    .bar-info {
+                        @include FlexDisplay(row, space-between, center, nowrap); 
+
+                        .sub-box-icon-percent {
+                            order: 2; 
+                            margin-top: 0.4rem;
+                            position: relative;
+                            width: auto;
+                            padding: 0.3rem; 
+                            font-size: $normal-font - 0.26rem; 
+                            background-color: $my-work-space-bar-icon-bg-clr;
+                            border-radius: $normal-bdr-rdr; 
+                        }
+    
+                        .sub-box-subtitle-name {
+                            font-size: $normal-font - 0.2rem;
+                        }
+                    }
+                }
+
+            }
+
+        }
+
+        .second-section {
+            transform: translateY(4%);
+            width: 80%; 
+            height: 88%; 
+
+            @include transitionBody(); 
+
+            .graphic-section {
+                width: 98%; 
+                height: 98%;  
+
+                .box {
+                    height: 4.6rem; 
+                    width: 6.8rem;
+                    border-radius: $normal-bdr-rdr; 
+                    background-color: #999;
+                    position: relative;
+                    margin-bottom: 0.4rem; 
+
+                    &:nth-child(1) {
+                        left: 60%; 
+                    }
+
+                    &:nth-child(2) {
+                        left: 30%; 
+                    }
+
+                    &:nth-child(3) {
+                        left: 82%; 
+                    }
+
+                    &:nth-child(4) {
+                        left: 8%;  
+                    }
+
+                    &:nth-child(5) {
+                        left: 60%; 
+                    }
+
+                    &:nth-child(6) {
+                        left: 22%; 
+                    }
+
+                }
+
+            }
+
+        }
+}

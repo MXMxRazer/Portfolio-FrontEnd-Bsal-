@@ -1,0 +1,13 @@
+.super-request-front {
+    position: absolute; 
+    border: 2px solid red; 
+    height: 200vh; 
+    width: 200vw;
+    background-color: rgba(0, 0, 0, 0.6); 
+    z-index: 100; 
+
+    .main-request-front {
+        position: relative; 
+    }
+
+}

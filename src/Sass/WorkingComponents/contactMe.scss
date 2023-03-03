@@ -1,0 +1,102 @@
+@import '../Variables/variables.scss'; 
+@import '../Mixins/mixins.scss'; 
+
+.contact-me-main {
+    width: 100%; 
+    height: 100%; 
+    margin-top: 3rem; 
+    position: relative;
+
+    .title-section {
+        @include titleStyle(); 
+        position: relative; 
+        margin-bottom: 2rem; 
+
+        @include transitionHeader(); 
+
+    }
+
+    .content-section {
+        position: relative;
+        width: inherit; 
+        height: inherit;    
+        @include FlexDisplay(row, space-around, center, nowrap);
+        @include centerWithMargin(); 
+        
+        @include transitionBody(); 
+
+        .content-info-text {
+            width: 40%;
+            height: auto;  
+
+            .content-info-header {
+                font-size: $larger-font;  
+                transform: rotate(4deg);
+                margin-bottom: 1.2em; 
+                letter-spacing: 2px;
+                color: rgba(86, 86, 86, 0.78); 
+                text-decoration: 2px underline;
+            }
+
+            .content-info-para {
+                font-size: $normal-font - 0.12rem;
+                letter-spacing: 1px;
+            }
+
+        }
+
+        .content-form {
+            width: 36%;
+            position: relative;
+            height: 78%;
+            @include FlexDisplay(column, center, center, nowrap); 
+            gap: 1.4rem; 
+            background-color: #666;
+            border-radius: $normal-bdr-rdr;
+            padding: 0.6rem; 
+            }
+
+            .form-box{
+                width: 92%; 
+                border: none; 
+                border-radius: $normal-bdr-rdr + 4px;
+                font-size: 0.88rem;  
+                padding: 0.6rem 0.8rem;
+
+                &:hover, &:focus {
+                    outline: none; 
+                    opacity: 0.8;
+                    background-color: rgba(255, 255, 255, 0.92);
+                
+                    &::placeholder {
+                        color: darken($color: #444, $amount: 1); 
+                    }
+
+                }
+
+            }
+
+            #message {
+                resize: none; 
+            }
+
+            .submit-btn {
+                width: 98%; 
+                padding: 0.6rem;
+                font-size: 0.8rem;
+                border-radius: $normal-bdr-rdr - 4px;
+                outline: none; 
+                border: none; 
+                margin: 0; 
+                color: rgba(255, 255, 255, 0.88); 
+                background-color: rgb(70, 65, 65);
+                box-shadow: 0px 0px 12px 1px rgba(255, 255, 255, 0.88);
+
+                @include btnHover(#ccc, #666); 
+            }
+
+        }
+
+
+    }
+

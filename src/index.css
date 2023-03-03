@@ -1,0 +1,84 @@
+body {
+    background-position-x: center;
+    background-size: cover; 
+    animation: animteBg 2s linear infinite; 
+    overflow-x: hidden; 
+}
+
+@keyframes animateBg {
+    0%, 100% {
+        transform: scale(1);
+    } 50% {
+        transform: scale(8); 
+    }
+}
+
+span {
+    position: fixed; 
+    top: 50%; 
+    left: 50%; 
+    width: 4px; 
+    height: 4px; 
+    background: #000; 
+    border-radius: 50%; 
+    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.8),
+    0 0 0 8px rgba(0, 0, 0, 0.1), 0 0 20px rgba(0, 0, 0, 1);
+    animation: animate 3s linear infinite; 
+    background-attachment: fixed;
+}
+
+@keyframes animate {
+    0% {
+      transform: rotate(315deg) translateX(0);
+      opacity: 1;
+    }
+    70% {
+      opacity: 1;
+    }
+    100% {
+      transform: rotate(315deg) translateX(-1500px);
+      opacity: 0;
+    }
+  }
+
+span::before {
+    content: ""; 
+    position: absolute; 
+    top: 50%; 
+    transform: translateY(-50%); 
+    width: 300px; 
+    height: 1px; 
+    background: linear-gradient(90deg, #000, transparent); 
+}
+
+span:nth-child(1) {
+    top: 0; 
+    right: 0; 
+    left: initial; 
+    animation-delay: 0;
+    animation-duration: 1s; 
+}
+
+span:nth-child(2) {
+    top: 0;
+    right: 80px;
+    left: initial;
+    animation-delay: 0.8s;
+    animation-duration: 3s;
+  }
+  
+  span:nth-child(3) {
+    top: 180px;
+    right: 0px;
+    left: initial;
+    animation-delay: 1s;
+    animation-duration: 2s;
+  }
+  
+  span:nth-child(4) {
+    top: 0;
+    right: 180px;
+    left: initial;
+    animation-delay: 2s;
+    animation-duration: 1.5s;
+  }

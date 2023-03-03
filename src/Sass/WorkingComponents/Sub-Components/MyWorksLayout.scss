@@ -1,0 +1,94 @@
+@import '../../Variables/variables.scss';
+@import '../../Mixins/mixins.scss'; 
+ 
+.my-works-layout-main {
+    width: 100%; 
+    height: 100%; 
+    left: 0.48rem !important; 
+    margin: 0 !important; 
+    @include FlexDisplay(row, center, center, nowrap); 
+    padding: 1.6rem 0.6rem; 
+
+    .circle-main {
+        border-radius: $normal-bdr-rdr;
+        width: 52%; 
+        position: relative; 
+        height: 92%; 
+        margin-right: 2rem;
+        display: flex;
+        align-items: center;
+
+        #circle-works {
+            width: 100%;
+            height: 68%;
+            border-radius: inherit;
+            opacity: 0.82;
+        }
+
+    }
+
+    .rect-main {
+        padding: 0.2rem 0.4rem; 
+        background-color: rgba(80, 80, 80, 0.6);
+        border-radius: $normal-bdr-rdr; 
+        height: 100%; 
+        color: #fff; 
+        width: 84%; 
+
+        .work-info-main {
+            @include FlexDisplay(column, center, center, nowrap);
+            width: 98%; 
+            @include centerWithMargin(); 
+            height: 100%;  
+            gap: 0.6rem; 
+
+            .work-info-header {
+                background-color: rgba(51, 51, 51, 0.68);;
+                font-size: $medium-font - 0.6rem; 
+                width: inherit;
+                border-radius: $normal-bdr-rdr; 
+                padding: 0.88rem 0.6rem;  
+            }
+
+            .work-info-para {
+                background-color: rgba(51, 51, 51, 0.68);;
+                font-size: 0.88rem;
+                width: inherit;
+                line-height: normal;
+                letter-spacing: 0.2px;
+                word-spacing: 0.2px; 
+                text-align: start; 
+                height: 60%; 
+                border-radius: $normal-bdr-rdr; 
+                padding: 0.4rem 0.6rem; 
+            }
+
+            .work-info-btn {
+                background-color: rgba(51, 51, 51, 0.68);;
+                width: inherit;
+                font-size: 1rem;
+                position: relative; 
+                font-weight: $bold-font;
+                border-radius: $normal-bdr-rdr; 
+                padding: 0.4rem 0.6rem; 
+                cursor: pointer;
+
+                @include carouselBtnHover(); 
+
+                p{
+                    padding: 0 !important; 
+                    margin: 0 !important; 
+
+                    &:hover {
+                        visibility: collapse;
+                    }
+
+                }
+
+            }
+
+        }
+        
+    }
+
+}

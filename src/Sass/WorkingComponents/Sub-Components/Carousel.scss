@@ -1,0 +1,63 @@
+@import '../../Mixins/mixins.scss'; 
+
+.carousel-main {
+    height: 92%; 
+    width: 100%;   
+    @include centerWithMargin(); 
+    @include FlexDisplay(row, center, center, nowrap); 
+
+    @include transitionBody(); 
+
+    .btn-main {
+        width: auto; 
+        @include FlexDisplay(row, space-between, center, nowrap);
+        position: relative;
+        height: 100%; 
+
+        .carousel-btn {
+            cursor: pointer;  
+            font-size: 1.4rem;
+            color: #333;  
+            border: none; 
+        }
+
+    }
+
+    .slider {
+        position: relative; 
+        width: 100%; 
+        height: 100%;
+        overflow: hidden; 
+        align-self: center;
+
+        .slides {
+            @include FlexDisplay(row, space-between, center, nowrap); 
+            width: 100%; 
+            max-width: 98%;
+            max-height: 90%; 
+            height: 100%; 
+            position: relative;
+
+            .slide {
+                height: 100%; 
+                width: 100%; 
+                position: absolute; 
+                align-self: center;
+                opacity: 0; 
+                left: -100%; 
+                transition: .8s; 
+                transition-delay: .2s;
+            }
+
+            .active {
+                transition: .8s; 
+                left: 0; 
+                opacity: 1; 
+            }
+
+        }
+
+        
+    }
+
+}

@@ -1,0 +1,23 @@
+@import '../Variables/variables.scss'; 
+@import '../Mixins/mixins.scss'; 
+
+.my-works-main {
+    width: 78%; 
+    height: 24rem; 
+    @include centerWithMargin();
+    position: relative;
+    margin-top: 3rem; 
+    margin-bottom: 6rem; 
+    left: 2rem;
+
+    .my-works-title {
+        @include titleStyle(); 
+        width: 100%; 
+        text-align: center;
+        position: relative;
+
+        @include transitionHeader(); 
+
+    }
+
+}

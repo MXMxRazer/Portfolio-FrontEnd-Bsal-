@@ -1,0 +1,52 @@
+@import '../Variables/variables.scss'; 
+@import '../Mixins/mixins.scss'; 
+
+.my-chart-main {
+    @include FlexDisplay(column, center, center, nowrap); 
+    height: 100%;
+    margin-top: 4rem;  
+
+    .title-section {    
+        font-size: 2.12rem; 
+        @include BlockDisplay(center, 100%); 
+        color: $my-chart-title-clr; 
+        margin-bottom: 2.12rem; 
+
+        @include transitionHeader(); 
+
+    }
+
+    .super-box {
+        position: relative;
+        background-color: $my-chart-bg-clr; 
+        @include FlexDisplay(row, space-around, center, nowrap); 
+        width: 72%;
+        height: 28%;
+        padding: 0.6rem 0.2rem; 
+        border-radius: $normal-bdr-rdr;
+        
+        @include transitionBody(); 
+
+        .sub-box {
+            height: 100%;  
+            padding: 0.4rem 0.6rem;
+            width: 24%;   
+            border-radius: $normal-bdr-rdr;
+            background-color: rgba(255, 255, 255, 0.96); 
+            @include FlexDisplay(column, space-around, center, nowrap); 
+
+            .sub-box-header {
+                font-size: $larger-font; 
+                color: $my-chart-box-title-clr;
+                margin-bottom: 0.4rem;  
+            }
+
+            .sub-box-subtitle {
+                font-size: $normal-font;
+                color: $my-chart-box-para-clr; 
+            }
+
+        }
+    }
+
+}
