@@ -38,7 +38,7 @@ export default function MyChart() {
                 </div>
                 <div className="sub-box">
                     <div className="sub-box-header">
-                        10000+
+                        6000+
                     </div>
                     <div className="sub-box-subtitle">
                         Hours Spent
