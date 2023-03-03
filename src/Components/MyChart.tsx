@@ -22,7 +22,7 @@ export default function MyChart() {
             >
                 <div className={`sub-box`}>
                     <div className="sub-box-header">
-                        XXX
+                        12
                     </div>
                     <div className="sub-box-subtitle">
                         Projects                       
@@ -30,18 +30,18 @@ export default function MyChart() {
                 </div>
                 <div className="sub-box">
                     <div className="sub-box-header">
-                        XXX
+                        2+
                     </div>
                     <div className="sub-box-subtitle">
-                        Hours Spent
+                        Years Spent
                     </div>
                 </div>
                 <div className="sub-box">
                     <div className="sub-box-header">
-                        XXX
+                        10000+
                     </div>
                     <div className="sub-box-subtitle">
-                        Something Else
+                        Hours Spent
                     </div>
                 </div>
             </div>
