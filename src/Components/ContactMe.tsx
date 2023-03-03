@@ -45,12 +45,6 @@ export default function ContactMe({Show, setShow, result, setResult}: any) {
             className={`title-section ${transRes(contactMe, true)}`}>
                 Contact Me
             </div>
-            {/* <SnackBar
-                show={Show}
-                result={Result}
-                setShow={setShow}
-                setResult={setResult}
-            /> */}
             <div className={`content-section ${transRes(contactMe, false)}`}>
                 <div className="content-info-text">
                     <div className="content-info-header">
@@ -79,8 +73,8 @@ export default function ContactMe({Show, setShow, result, setResult}: any) {
                     <textarea 
                     placeholder="Message" 
                     id="message" 
-                    cols="30" 
-                    rows="10" 
+                    cols={30}
+                    rows={10} 
                     className="form-box"
                     ref={refMessage}
                     />
