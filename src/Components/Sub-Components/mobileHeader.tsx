@@ -8,6 +8,7 @@ export default function MobileHeader({clickFunction}: any) {
         <div className="mobile-header-main">
             <IoReorderThreeOutline
             id="nav-mobile-btn"
+            onClick={clickFunction}
             />
         </div>
     ); 
