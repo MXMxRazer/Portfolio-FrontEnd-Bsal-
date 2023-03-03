@@ -7,13 +7,13 @@
   height: 100%;
   margin-top: 3rem;
   position: relative;
+  left: 0.36rem;
 }
 .contact-me-main .title-section {
   font-size: 2.12rem;
   color: rgba(51, 51, 51, 0.86);
   margin-bottom: 1rem;
   position: relative;
-  margin-bottom: 2rem;
   transform: translate(56%);
   opacity: 0;
   transition: 1.4s ease-in-out;
@@ -43,7 +43,7 @@
   transform: rotate(4deg);
   margin-bottom: 1.2em;
   letter-spacing: 2px;
-  color: rgba(86, 86, 86, 0.78);
+  color: rgba(86, 86, 86, 0.8);
   -webkit-text-decoration: 2px underline;
           text-decoration: 2px underline;
 }
@@ -61,12 +61,12 @@
   align-items: center;
   flex-wrap: nowrap;
   gap: 1.4rem;
-  background-color: #666;
+  background-color: rgba(52, 52, 52, 0.6);
   border-radius: 10px;
   padding: 0.6rem;
 }
 .contact-me-main .content-section .form-box {
-  width: 92%;
+  width: 88%;
   border: none;
   border-radius: 14px;
   font-size: 0.88rem;

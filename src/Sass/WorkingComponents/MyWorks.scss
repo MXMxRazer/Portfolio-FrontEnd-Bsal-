@@ -2,8 +2,8 @@
 @import '../Mixins/mixins.scss'; 
 
 .my-works-main {
-    width: 78%; 
-    height: 24rem; 
+    width: 70%; 
+    height: 22rem; 
     @include centerWithMargin();
     position: relative;
     margin-top: 3rem; 
@@ -15,6 +15,7 @@
         width: 100%; 
         text-align: center;
         position: relative;
+        left: -0.28rem; 
 
         @include transitionHeader(); 
 

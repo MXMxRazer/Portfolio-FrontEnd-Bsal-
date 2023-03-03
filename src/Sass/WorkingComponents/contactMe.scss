@@ -6,11 +6,11 @@
     height: 100%; 
     margin-top: 3rem; 
     position: relative;
+    left: 0.36rem; 
 
     .title-section {
         @include titleStyle(); 
         position: relative; 
-        margin-bottom: 2rem; 
 
         @include transitionHeader(); 
 
@@ -34,7 +34,7 @@
                 transform: rotate(4deg);
                 margin-bottom: 1.2em; 
                 letter-spacing: 2px;
-                color: rgba(86, 86, 86, 0.78); 
+                color: rgba(86, 86, 86, 0.8); 
                 text-decoration: 2px underline;
             }
 
@@ -51,13 +51,13 @@
             height: 78%;
             @include FlexDisplay(column, center, center, nowrap); 
             gap: 1.4rem; 
-            background-color: #666;
+            background-color: rgba(52, 52, 52, 0.6);
             border-radius: $normal-bdr-rdr;
             padding: 0.6rem; 
             }
 
             .form-box{
-                width: 92%; 
+                width: 88%; 
                 border: none; 
                 border-radius: $normal-bdr-rdr + 4px;
                 font-size: 0.88rem;  

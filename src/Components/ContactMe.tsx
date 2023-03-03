@@ -1,9 +1,8 @@
 import { useInView } from 'react-intersection-observer';
 import '../Sass/SassComponents/contactMe.css'; 
 import { transRes } from '../Variables (Storage)/Storage';
-import { useRef, useState } from 'react';
+import { useRef } from 'react';
 import axios from 'axios'; 
-import SnackBar from '../snackbar/snackBar';
 
 export default function ContactMe({Show, setShow, result, setResult}: any) {
 
@@ -26,8 +25,8 @@ export default function ContactMe({Show, setShow, result, setResult}: any) {
         refEmail.current.value = ""; 
         refMessage.current.value = ""; 
         
-        const res = await axios.post(`http://localhost:3000/api/mail`, postData);
-        if (res.status == 401) {
+        const res = await axios.post(`http://localhost:3000/api/mail`, postData); 
+        if (res.status == 401) { 
             console.log(`Error posting data!`); 
         } else {
             setResult(true); 

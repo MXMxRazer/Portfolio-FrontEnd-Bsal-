@@ -12,7 +12,7 @@
         position: relative; 
         width: 100%;
         @include titleStyle(); 
-        left: 1rem; 
+        left: 0.4rem; 
 
         @include transitionHeader(); 
         margin-bottom: 2rem; 
@@ -75,6 +75,12 @@
                     display: flex; 
                     gap: 2rem; 
                     width: 100%; 
+
+                    @media (max-width: 550px) {
+                        display: flex; 
+                        flex-direction: column; 
+                        width: 94%; 
+                    }
 
                     .request-input {
                         width: 100%;    
